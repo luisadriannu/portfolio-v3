@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout description="Página no encontrada." title="No encontrada | Luizack">
+  <section class="flex h-screen items-center justify-center">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="flex flex-col items-start gap-8 sm:gap-10">
+        <div class="flex flex-col gap-4 sm:gap-6">
+          <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+            <div>404</div>
+            <div>Oops... No se ha podido encontrar esta página</div>
+          </h1>
+          <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+            Por favor comprueba la URL e intentalo de nuevo.
+          </p>
+        </div>
+        <a
+          href="/"
+          class="bg-yellow inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition"
+        >
+          Volver a inicio
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
