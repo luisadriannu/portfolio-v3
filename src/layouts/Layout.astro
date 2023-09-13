@@ -11,7 +11,7 @@ interface Props {
   title: string;
 }
 
-const { description, title } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,41 +19,43 @@ const { description, title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="twitter:title" content="Luizack | Frontend Developer" />
     <meta name="theme-color" content="#e1a028" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content="website" />
+    <meta
+      name="description"
+      content="Descubre mi experiencia en la creación de páginas web utilizando tecnologías como React, JavaScript, Astro, HTML & CSS. Visita cada uno de mis proyectos que reflejan mi dedicación y creatividad."
+    />
     <meta name="apple-mobile-web-app-status-bar" content="#e1a028" />
-    <meta name="description" content={description} />
     <meta name="author" content="Luis Adrian" />
     <link rel="author" href="https://luizack.site" />
     <link rel="canonical" href="https://luizack.site" />
     <meta
+      property="og:image"
+      name="twitter:image"
+      content="https://luizack.site/android-chrome-512x512.png"
+    />
+    <meta property="og:url" content="https://luizack.site" />
+    <meta
       name="keywords"
       content="React,JavaScript,Luis,Adrian,Nuñez,Jaramillo,CSS,HTML,Frontend,Developer,Web,luizackjs,luizack.site,luisadriannu,Luis Adrian,Luis Adrian Nuñez Jaramillo,luis,adrian,nuñez,luis adrian,portfolio,portafolio,projects,proyectos,skills,habilidades,about,sobre,contact,contacto,contactame,contactame,contact me"
     />
+    <meta
+      property="og:description"
+      name="twitter:description"
+      content="Descubre mi experiencia en la creación de páginas web utilizando tecnologías como React, JavaScript, Astro, HTML & CSS. Visita cada uno de mis proyectos que reflejan mi dedicación y creatividad."
+    />
     <meta name="creator" content="Luis Adrian" />
-    <meta name="format-detection" content="telephone=no, address=no, email=no" />
     <meta property="og:title" content="Luizack | Frontend Developer" />
-    <ViewTransitions />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://luizack.site" />
     <meta property="og:site_name" content="Luizack, Frontend Developer" />
-    <meta property="og:locale" content="es_CO" />
-    <meta property="og:image:url" content="/assets/android-chrome-512x512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="Luis Adrian" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:locale" content="es" />
     <meta name="twitter:site" content="@LuisAdrianNuez" />
     <meta name="twitter:creator" content="@LuisAdrianNuez" />
-    <meta name="twitter:title" content="Luizack | Frontend Developer" />
-    <meta name="twitter:image" content="/assets/android-chrome-512x512.png" />
-    <meta name="next-head-count" content="30" />
+    <ViewTransitions />
   </head>
   <body
     class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
