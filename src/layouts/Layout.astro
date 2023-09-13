@@ -4,6 +4,7 @@ import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import Noise from '../components/Noise.astro';
 
 interface Props {
   description: string;
@@ -23,14 +24,42 @@ const { description, title } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
     <title>{title}</title>
+    <meta name="theme-color" content="#e1a028" />
+    <meta name="apple-mobile-web-app-status-bar" content="#e1a028" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Luis Adrian" />
+    <link rel="author" href="https://luizack.site" />
+    <link rel="canonical" href="https://luizack.site" />
+    <meta
+      name="keywords"
+      content="React,JavaScript,Luis,Adrian,Nuñez,Jaramillo,CSS,HTML,Frontend,Developer,Web,luizackjs,luizack.site,luisadriannu,Luis Adrian,Luis Adrian Nuñez Jaramillo,luis,adrian,nuñez,luis adrian,portfolio,portafolio,projects,proyectos,skills,habilidades,about,sobre,contact,contacto,contactame,contactame,contact me"
+    />
+    <meta name="creator" content="Luis Adrian" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <meta property="og:title" content="Luizack | Frontend Developer" />
     <ViewTransitions />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://luizack.site" />
+    <meta property="og:site_name" content="Luizack, Frontend Developer" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:image:url" content="/assets/android-chrome-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Luis Adrian" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LuisAdrianNuez" />
+    <meta name="twitter:creator" content="@LuisAdrianNuez" />
+    <meta name="twitter:title" content="Luizack | Frontend Developer" />
+    <meta name="twitter:image" content="/assets/android-chrome-512x512.png" />
+    <meta name="next-head-count" content="30" />
   </head>
   <body
     class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
     <Header />
+    <Noise />
     <main>
       <slot />
     </main>

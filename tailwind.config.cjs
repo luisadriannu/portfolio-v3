@@ -10,11 +10,8 @@ module.exports = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      black: '#000',
-      yellow: '#e1a028',
+      black: '#000000',
       primary: colors.stone,
-      colorMail: '#2E2F5F',
-      colorLinkedin: '#0a66c2',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
@@ -30,6 +27,11 @@ module.exports = {
       '4xl': ['2.25rem', '2.75rem'],
       '5xl': ['3rem', '3.5rem'],
       '6xl': ['3.75rem', '4.25rem'],
+    },
+    extend: {
+      height: {
+        608: '608px',
+      },
     },
   },
 };

@@ -1,34 +1,44 @@
-<section class="pb-16 pt-32 sm:py-32">
+<section class="pb-12 pt-32 md:h-auto md:pb-8">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-8 sm:gap-10">
         <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
           <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-            Bienvenidos a mi sitio
+            Hola👋🏼 <br /> Bienvenidos a mi sitio
           </h1>
           <h2 class="text-2xl lg:text-4xl">
-            Yo soy <b class="text-yellow">Luis Adrian</b>
+            Yo soy <b class="text-[#e1a028]">Luis Adrian</b>
           </h2>
           <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
-            Un joven apasionado por crear aplicaciones web brindando la mejor experiencia de
-            usuario.
+            Un joven apasionado con la habilidad en la creación de experiencias web interactivas y
+            atractivas.
           </p>
         </div>
         <a
-          href="/cv-luisadrian.pdf"
-          class="bg-yellow inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition"
+          href="/assets/cv-luisadrian.pdf"
+          class="gif inline-flex items-center justify-center rounded-xl border border-transparent bg-[#e1a028] px-5 py-3 text-base font-medium text-white transition"
           target="_blank"
         >
           Descargar CV
         </a>
       </div>
-      <img
-        class="h-auto w-full rounded-3xl"
-        width="1280"
-        height="640"
-        src="/assets/hero-image-home.jpg"
-        alt="Hero picture"
-      />
+      <div class="relative aspect-auto h-56 overflow-hidden rounded-xl md:h-64 lg:h-[608px]">
+        <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full p-4 text-white">
+          <h2 class="text-xl md:text-xl">Proyectos, skills & más</h2>
+          <p class="text-xs leading-5 md:text-sm">
+            Aquí puedes encontrar algunos de mis proyectos, experiencia y un poco sobre mí.
+          </p>
+        </div>
+        <div class="absolute h-full w-full bg-[#7f6129c0] dark:bg-[#e1a0284d]">
+          <img
+            class="h-full w-full object-cover opacity-40"
+            width="1216"
+            height="608"
+            src="/assets/coding.gif"
+            alt="Hero picture"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </section>

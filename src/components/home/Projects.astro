@@ -5,9 +5,8 @@ const projects = [
     image: '/assets/portfolio-tapiceria.png',
     name: 'Tapicería Miryta',
     description:
-      'Una empresa que se dedica a hacer reparaciones y tapizado de sillones, sillas, automoviles etc.',
-    url: 'https://tapiceria-miryta.vercel.app/',
-    isAvailable: true,
+      'Una empresa que se dedica a hacer reparaciones y tapizado de sillones, sillas, automóviles, etc.',
+    isAvailable: false,
     tools: ['React', 'Typescript'],
   },
   {
@@ -23,7 +22,7 @@ const projects = [
     step: '03',
     image: '/assets/portfolio-luisadrian-v2.png',
     name: 'Mi sitio web V2',
-    description: 'Está página web fue hecha para destacar mis habilidades, estudios y proyectos.',
+    description: 'Esta página web fue hecha para destacar mis habilidades, estudios y proyectos.',
     url: 'https://hechoconamor.online/',
     isAvailable: true,
     tools: ['CSS', 'Javascript'],
@@ -33,7 +32,7 @@ const projects = [
     image: '/assets/portfolio-mob-studio.png',
     name: 'MOB Studio',
     description:
-      'Un estudio fotográfico que captura momentos inolvidables representadas en fotografías.',
+      'Un estudio fotográfico que captura momentos inolvidables representados en fotografías.',
     url: 'https://mob-studio.vercel.app/',
     isAvailable: true,
     tools: ['React', 'Javascript'],
@@ -63,7 +62,7 @@ const projects = [
     image: '/assets/portfolio-reckless.png',
     name: 'Reckless Coffe',
     description:
-      'Una cafetería que ofrece descuentos, categorías, mejores productos y asi como también distintos tipos de café.',
+      'Una cafetería que ofrece descuentos, categorías, mejores productos y así como también distintos tipos de café.',
     url: 'https://reckless-coffe.web.app/',
     isAvailable: true,
     tools: ['HTML', 'CSS'],
@@ -73,7 +72,7 @@ const projects = [
     image: '/assets/portfolio-ligas.png',
     name: 'Liga Deportiva Huetamo',
     description:
-      'Una liga que contiene diferentes tipos de deportes, cada uno de ellos tiene equipos que compiten entre si.',
+      'Una liga que contiene diferentes tipos de deportes, cada uno de ellos tiene equipos que compiten entre sí.',
     url: 'https://liga-a7ce2.web.app/',
     isAvailable: true,
     tools: ['Java', 'Struts'],
@@ -93,7 +92,6 @@ const projects = [
     name: 'GESCO',
     description:
       'Un sistema de gestor de correspondencia mejora el seguimiento de los oficios de las 41 áreas de la Secretaría de Desarrollo Económico del Estado de Michoacán.',
-    url: '',
     isAvailable: false,
     tools: ['Angular', 'Bootstrap'],
   },
@@ -130,18 +128,30 @@ const projects = [
                 <div>
                   <a
                     class:list={[
-                      'bg-yellow inline-flex w-56 items-center justify-center gap-1 rounded-xl py-4 text-center font-medium text-white',
+                      ' inline-flex w-56 items-center justify-center gap-1 rounded-xl py-4 text-center font-medium text-white',
                       {
                         'pointer-events-none': !project.isAvailable,
                         'pointer-events-auto': project.isAvailable,
+                        'bg-[#16A34A]': project.isAvailable,
+                        'bg-[#DC2626]': !project.isAvailable,
                       },
                     ]}
                     href={project.url}
                     target="_blank"
                     rel="noopener"
                   >
-                    {project.url === '' ? 'No disponible' : 'Ver en vivo'}
-                    {project.url === '' ? (
+                    {project.isAvailable ? 'Ver en vivo' : 'No disponible'}
+                    {project.isAvailable ? (
+                      <svg
+                        class="h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+                      </svg>
+                    ) : (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-4 w-4"
@@ -156,16 +166,6 @@ const projects = [
                         <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" />
                         <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
                         <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
-                      </svg>
-                    ) : (
-                      <svg
-                        class="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
                       </svg>
                     )}
                   </a>
