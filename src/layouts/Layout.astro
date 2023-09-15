@@ -6,11 +6,6 @@ import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import Noise from '../components/Noise.astro';
 
-interface Props {
-  description: string;
-  title: string;
-}
-
 const { title } = Astro.props;
 ---
 
@@ -19,6 +14,9 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -39,7 +37,7 @@ const { title } = Astro.props;
       name="twitter:image"
       content="https://luizack.site/android-chrome-512x512.png"
     />
-    <meta property="og:url" content="https://luizack.site" />
+    <meta property="og:url" name="twitter:url" content="https://luizack.site" />
     <meta
       name="keywords"
       content="React,JavaScript,Luis,Adrian,Nuñez,Jaramillo,CSS,HTML,Frontend,Developer,Web,luizackjs,luizack.site,luisadriannu,Luis Adrian,Luis Adrian Nuñez Jaramillo,luis,adrian,nuñez,luis adrian,portfolio,portafolio,projects,proyectos,skills,habilidades,about,sobre,contact,contacto,contactame,contactame,contact me"
@@ -55,6 +53,7 @@ const { title } = Astro.props;
     <meta property="og:locale" content="es" />
     <meta name="twitter:site" content="@LuisAdrianNuez" />
     <meta name="twitter:creator" content="@LuisAdrianNuez" />
+
     <ViewTransitions />
   </head>
   <body
