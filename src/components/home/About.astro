@@ -1,5 +1,24 @@
 ---
 import ContentAbout from '../about/ContentAbout.astro';
+
+const birthDate = '1999-12-26';
+
+function calculateAge(birthDate: string) {
+  const today = new Date();
+  const birth = new Date(birthDate);
+
+  let age = today.getFullYear() - birth.getFullYear();
+
+  const hasBirthdayPassed =
+    today.getMonth() > birth.getMonth() ||
+    (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+
+  if (!hasBirthdayPassed) {
+    age -= 1;
+  }
+
+  return age;
+}
 ---
 
 <section id="sobre-mi" class="py-8 sm:py-20">
@@ -8,11 +27,11 @@ import ContentAbout from '../about/ContentAbout.astro';
       <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Sobre mí</h2>
       <div class="flex flex-col items-start gap-8 sm:gap-10 lg:col-span-2">
         <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-          Tengo 23 años de edad, desde 2020 me he adentrado en el maravilloso mundo de la
-          programación desarrollando sitios tanto personales como académicos. Disfruto llevar a cabo
-          la maquetación e interactividad de interfaces web. Me gusta mucho trabajar en equipo
-          colaborando en proyectos. Tengo buen ojo para los pequeños detalles que marcan la
-          diferencia, y siempre pongo lo mejor de mí en mis trabajos. Siempre estoy feliz de
+          Tengo {calculateAge(birthDate)} años de edad, desde 2020 me he adentrado en el maravilloso
+          mundo de la programación desarrollando sitios tanto personales como académicos. Disfruto
+          llevar a cabo la maquetación e interactividad de interfaces web. Me gusta mucho trabajar
+          en equipo colaborando en proyectos. Tengo buen ojo para los pequeños detalles que marcan
+          la diferencia, y siempre pongo lo mejor de mí en mis trabajos. Siempre estoy feliz de
           aprender algo nuevo cada día para seguir en constante mejora.
         </p>
       </div>
